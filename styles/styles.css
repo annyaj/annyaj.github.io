@@ -1,0 +1,446 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Verdana";
+  src: url("../assets/fonts/verdana/Verdana.eot");
+  src: url("../assets/fonts/verdana/Verdana.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/verdana/Verdana.woff2") format("woff2"), url("../assets/fonts/verdana/Verdana.woff") format("woff"), url("../assets/fonts/verdana/Verdana.ttf") format("truetype"), url("../assets/fonts/verdana/Verdana.svg#../assets/fonts/verdana/") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Verdana";
+  src: url("../assets/fonts/verdana/Verdana-Bold.eot");
+  src: url("../assets/fonts/verdana/Verdana-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/verdana/Verdana-Bold.woff2") format("woff2"), url("../assets/fonts/verdana/Verdana-Bold.woff") format("woff"), url("../assets/fonts/verdana/Verdana-Bold.ttf") format("truetype"), url("../assets/fonts/verdana/Verdana-Bold.svg#../assets/fonts/verdana/-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Verdana";
+  src: url("../assets/fonts/verdana/Verdana-BoldItalic.eot");
+  src: url("../assets/fonts/verdana/Verdana-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/verdana/Verdana-BoldItalic.woff2") format("woff2"), url("../assets/fonts/verdana/Verdana-BoldItalic.woff") format("woff"), url("../assets/fonts/verdana/Verdana-BoldItalic.ttf") format("truetype"), url("../assets/fonts/verdana/Verdana-BoldItalic.svg#../assets/fonts/verdana/-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Verdana";
+  src: url("../assets/fonts/verdana/Verdana-Italic.eot");
+  src: url("../assets/fonts/verdana/Verdana-Italic.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/verdana/Verdana-Italic.woff2") format("woff2"), url("../assets/fonts/verdana/Verdana-Italic.woff") format("woff"), url("../assets/fonts/verdana/Verdana-Italic.ttf") format("truetype"), url("../assets/fonts/verdana/Verdana-Italic.svg#../assets/fonts/verdana/-Italic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+html, body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  height: 100%;
+}
+
+html {
+  font-family: "Verdana", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4em;
+  font-weight: 400;
+  color: #292929;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+h1 {
+  font-size: 52px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 29px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+p {
+  margin: 0;
+  line-height: 1.4em;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  background: none;
+  outline: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+ul li::before {
+  content: "•";
+  color: #0333c5;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.link {
+  color: #0333c5;
+  transition: color 0.4s;
+  font-weight: 700;
+}
+.link:hover {
+  color: #0557fa;
+}
+.link-disabled {
+  pointer-events: none;
+  color: #699afc;
+}
+
+.content {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+.content-small {
+  max-width: 800px;
+}
+
+.logo {
+  width: 150px;
+  height: 80px;
+  border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.layout {
+  display: flow-root;
+}
+
+.box {
+  padding: 2rem;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(252, 252, 226, 0.6);
+  z-index: -1;
+  filter: blur(1px);
+  border-radius: 20px;
+}
+
+.property {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.property-name {
+  width: 50%;
+  flex: 0 0 50%;
+  overflow: hidden;
+  position: relative;
+  padding-right: 1rem;
+  box-sizing: border-box;
+  line-height: 1.4em;
+  font-weight: 700;
+  color: #0333c5;
+}
+.property-value {
+  width: 50%;
+  flex: 0 0 50%;
+  padding-left: 1rem;
+  line-height: 1.4em;
+  color: #4B4C4A;
+  align-self: center;
+  box-sizing: border-box;
+}
+
+.credentials .col {
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+.credentials .col::after {
+  content: "";
+  position: absolute;
+  left: 32px;
+  bottom: 0;
+  right: 32px;
+  height: 1px;
+  background: rgba(129, 141, 129, 0.2);
+}
+
+.row {
+  margin: 0 -16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.row-centered {
+  align-items: center;
+}
+.row-big {
+  margin: 0 -32px;
+}
+.row-big .col {
+  padding: 0 32px;
+}
+
+.col {
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+.col-content {
+  width: auto;
+  flex: 0 0 auto;
+}
+.col-stretch {
+  width: auto;
+  flex: 1 1 0;
+}
+.col-20 {
+  width: 20%;
+  flex: 0 0 20%;
+}
+.col-25 {
+  width: 25%;
+  flex: 0 0 25%;
+}
+.col-33 {
+  width: 33.333333%;
+  flex: 0 0 33.333333%;
+}
+.col-50 {
+  width: 50%;
+  flex: 0 0 50%;
+}
+.col-66 {
+  width: 66.666666%;
+  flex: 0 0 66.666666%;
+}
+.col-75 {
+  width: 75%;
+  flex: 0 0 75%;
+}
+.col-100 {
+  width: 100%;
+  flex: 0 0 100%;
+}
+@media (max-width: 740px) {
+  .col-mobile-100 {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+}
+
+.navbar {
+  padding: 0 16px;
+  height: 100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  background: #fcfce2;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.navbar-content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.navbar-nav {
+  margin-left: auto;
+}
+.navbar-link {
+  text-transform: uppercase;
+  margin: 0.5rem 0 0.5rem 2rem;
+  position: relative;
+  display: inline-block;
+}
+.navbar-link::after {
+  content: "";
+  height: 2px;
+  background: #0333c5;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -0.4em;
+  transition-duration: 0.4s;
+  transition-property: background, transform;
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+.navbar-link:hover::after {
+  transform: none;
+  background: #0557fa;
+}
+
+.section {
+  position: relative;
+  min-height: 60vh;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+  padding: 0 16px;
+}
+.section em {
+  font-weight: 700;
+  color: #0333c5;
+  font-style: normal;
+}
+.section p {
+  margin-bottom: 1rem;
+  text-indent: 2rem;
+  text-align: justify;
+}
+.section ul {
+  margin-bottom: 2rem;
+}
+.section .section-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.section .section-header p {
+  font-size: 1.5rem;
+  text-align: inherit;
+}
+.section-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  z-index: -1;
+}
+.section-top {
+  padding-top: 200px;
+}
+
+.top-section {
+  padding: 200px 16px 100px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.top-section h1 {
+  text-align: center;
+}
+.top-section p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.top-section-background {
+  filter: blur(5px);
+  opacity: 0.5;
+}
+
+.clients-section-intro {
+  margin-bottom: 4rem;
+}
+.clients-section-industries {
+  font-size: 1.2rem;
+}
+.clients-section-industries p {
+  text-align: center;
+}
+
+.industries {
+  margin-top: 2rem;
+}
+.industries-item {
+  padding: 0 30px;
+  color: #0333c5;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+.industries-item-name {
+  position: relative;
+  display: inline-block;
+}
+.industries-item-name::after, .industries-item-name::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  background: #ad4582;
+}
+.industries-item-name::after {
+  left: -30px;
+}
+.industries-item-name::before {
+  right: -30px;
+}
+
+.services h2 {
+  text-align: left;
+}
+.services h4 {
+  margin-top: 2rem;
+}
+.services-tabs {
+  margin-bottom: 3rem;
+}
+.services-tab {
+  color: #A3A5A4;
+  font-weight: bold;
+  transition: color 0.4s;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+.services-tab:hover {
+  color: #ad4582;
+}
+.services-tab-current {
+  color: #ad4582;
+  position: relative;
+  pointer-events: none;
+}
+.services-tab-current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  background-color: #ad4582;
+}
