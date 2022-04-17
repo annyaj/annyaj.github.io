@@ -298,7 +298,7 @@ ul li::before {
   bottom: -0.4em;
   transition-duration: 0.4s;
   transition-property: background, transform;
-  transform-origin: left center;
+  transform-origin: center center;
   transform: scaleX(0);
 }
 .navbar-link:hover::after {
