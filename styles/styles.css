@@ -350,6 +350,10 @@ ul li::before {
   padding-top: 200px;
 }
 
+.section-footer {
+  min-height: auto;
+}
+
 .top-section {
   padding: 200px 16px 100px;
   min-height: 100vh;
